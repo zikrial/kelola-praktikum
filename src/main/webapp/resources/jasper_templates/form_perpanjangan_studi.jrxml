@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.0.final using JasperReports Library version 6.5.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pemantauan_akhir_ams" pageWidth="773" pageHeight="1030" columnWidth="743" leftMargin="20" rightMargin="10" topMargin="10" bottomMargin="20" uuid="d4d6908d-eb4c-4f9c-a5ae-2fecce7fce81">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="39d56faf-12cf-4685-bcb8-1475a6432756">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="angkatan" class="java.lang.Integer"/>
+	<parameter name="nrp" class="java.lang.String"/>
+	<parameter name="nama" class="java.lang.String"/>
+	<parameter name="prodi" class="java.lang.String"/>
+	<parameter name="pasmail" class="java.lang.String"/>
+	<parameter name="noHpMahasiswa" class="java.lang.String"/>
+	<parameter name="noHpOrangTua" class="java.lang.String"/>
+	<parameter name="jumlahMatakuliah" class="java.lang.Integer"/>
+	<parameter name="batas_studi" class="java.lang.Integer"/>
+	<parameter name="sksLulus" class="java.lang.Integer"/>
+	<parameter name="seminarTA" class="java.lang.Boolean"/>
+	<parameter name="tanggalPernyataanBelumLulus" class="java.util.Date"/>
+	<parameter name="tanggalPerpanganWaktuStudiTahap1Awal" class="java.util.Date"/>
+	<parameter name="tanggalPerpanganWaktuStudiTahap1Akhir" class="java.util.Date"/>
+	<parameter name="bersediaMembayarDppTahap1" class="java.lang.String"/>
+	<parameter name="tanggalPerpanganWaktuStudiTahap2Awal" class="java.util.Date"/>
+	<parameter name="tanggalPerpanganWaktuStudiTahap2Akhir" class="java.util.Date"/>
+	<parameter name="wadek1" class="java.lang.String"/>
+	<parameter name="wadek2" class="java.lang.String"/>
+	<parameter name="programId" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="76" splitType="Stretch">
+			<staticText>
+				<reportElement x="125" y="11" width="590" height="59" uuid="4d4e9ef5-482e-44c7-b0da-4cea8380e22e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="25" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FORMULIR PERMOHONAN
+PERPANJANGAN WAKTU STUDI
+MAHASISWA AMS ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="25" y="70" width="690" height="3" uuid="5d6ba59f-c8bf-4818-95b4-1bbd8a9ca170"/>
+			</line>
+			<image>
+				<reportElement x="35" y="0" width="71" height="66" uuid="a2c23d5c-57aa-4fc7-858c-a23ad51fa40c"/>
+				<imageExpression><![CDATA["logounpas.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band/>
+	</pageHeader>
+	<detail>
+		<band height="569" splitType="Stretch">
+			<staticText>
+				<reportElement x="30" y="110" width="84" height="17" uuid="3b3dce62-1d57-4275-9450-fd8ed68825fc"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[NRP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="109" y="110" width="4" height="17" uuid="da12f9a2-4b26-404c-bb6b-6a2b5fb876ae"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="110" width="200" height="17" uuid="ba0ff13e-a628-487a-ba13-bbc89d6b0f3e"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nrp}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="30" y="94" width="84" height="16" uuid="d2619deb-bcb6-4c27-a34a-10e8e9c4acd0"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="109" y="94" width="4" height="16" uuid="93927a5b-e1f1-48c8-8e0c-ff84dbde6200"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="94" width="290" height="16" uuid="ad68392c-5381-4c86-83f4-1516b9e0e01c"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nama}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="30" y="127" width="84" height="16" uuid="f91cb32a-8d36-4c70-a1d9-ab84672831d1"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Jurusan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="109" y="129" width="4" height="16" uuid="6999658d-e918-4170-b2ad-2b2f465f0955"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="120" y="127" width="200" height="16" uuid="f4174c89-e10f-4007-8493-6e097aee0750"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{prodi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="30" y="39" width="499" height="55" uuid="384f2214-638e-42bb-9710-171d5aeaf10d"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="11"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[Dengan Hormat,
+Saya yang bertanda tangan di bawah ini, adalah mahasiswa Teknik Universitas Pasundan, dengan identitas sebagai berikut :
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="171" width="85" height="18" uuid="1a8d4e0f-92f5-4c35-a3a9-1925b6f914d5">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Alamat di Bandung]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="109" y="171" width="4" height="18" uuid="91853d89-83e6-403a-ba69-59c7e9b9ee4a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="109" y="199" width="4" height="18" uuid="5d4952ee-dbec-4f5e-9477-490ce95dc562"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="198" width="84" height="18" uuid="a1c65e36-5137-4ef1-86ec-45ad42d6e51d"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Alamat Orang Tua]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="237" width="187" height="18" uuid="da84f9e4-44df-41c4-a984-e9d558491ede"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="11" isItalic="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[(checklist salah satu pilihan di bawah ini)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="66" y="278" width="141" height="18" uuid="0db5e8f9-2ad5-408d-acd0-75391dd7a7c1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tugas Akhir dan Matakuliah ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="305" width="644" height="30" uuid="2bc46978-ddfa-405b-88ef-ce5a64720c99"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="11"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Berdasarkan hal tersebut diatas, saya mohon agar Dekan Fakultas Teknik Unpas mengijinkan saya untuk mengikuti :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="351" width="286" height="18" uuid="7adcc2d9-a77b-45fc-bcd6-07a82ddea3f8"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PERPANJANGAN WAKTU STUDI KE - I]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="440" width="172" height="20" uuid="22e94ccf-009a-4f1f-ae4d-47e6e80434e3"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Bandung, .........................20....]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="463" width="180" height="30" uuid="3b869b4e-ef96-441d-bbcf-4baceaa2706c"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="11"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[Mahasiswa,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="460" width="200" height="30" uuid="4e5ca5b0-387c-4a73-a14a-f24232b2d772"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<text><![CDATA[Ketua/Sekretaris
+Program Studi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="460" width="170" height="30" uuid="e8745dae-3d7a-4f1b-9eab-f422a625cf49"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="11"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[Wakil Dekan I]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="550" y="460" width="180" height="30" uuid="4ee9f68c-d2cb-4e27-b4ff-3d2578218553"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="11"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[Wakil Dekan II]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="538" width="180" height="20" uuid="155adee0-2e8b-49ca-b366-d8ca71ea4950"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{nama}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" x="180" y="546" width="200" height="20" uuid="f92d8000-00e2-41c5-9210-9f44f588fafc"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="11"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[...................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="255" width="140" height="18" uuid="7969a3a2-1f5e-4452-bbaf-8053eb9185fa"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Hanya Tinggal Tugas Akhir]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="37" y="256" width="13" height="13" uuid="dbfb42d7-c484-4cc4-8d6a-85d75f2554ea"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="37" y="279" width="13" height="13" uuid="2f4384c4-c6ad-4a72-bbde-33aa4bd705ea"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="30" y="352" width="13" height="13" uuid="c7f41b2a-4558-4015-a9d8-f5a73676861c">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</rectangle>
+			<textField>
+				<reportElement x="12" y="0" width="718" height="30" uuid="15b29c3c-b868-4396-a9e4-b80e30211673"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Angkatan : "+$P{angkatan}+" ("+$P{programId}+")"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="210" y="255" width="113" height="18" uuid="13571236-2765-486f-8e8f-465292fbeee8"/>
+				<textElement>
+					<font fontName="Times New Roman" size="9" isBold="false" isItalic="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[(kriteria A)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="209" y="279" width="133" height="18" uuid="ab1220d3-cbff-4969-a101-72e8636673aa"/>
+				<textElement>
+					<font fontName="Times New Roman" size="9" isBold="false" isItalic="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[(kriteria B)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="109" y="148" width="4" height="16" uuid="9b4c1321-6e67-4b2c-a8ac-19b2884c5e8d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="146" width="84" height="16" uuid="1a1ca670-60f2-4f74-a593-79963beace7a"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Pasmail]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="120" y="146" width="200" height="16" uuid="21127689-0e0e-4cd9-a1c7-c37c252a2200"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{pasmail}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="220" width="650" height="16" uuid="a48065cb-4bed-4d2c-96f1-6ba5d077bcc1"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Sampai dengan tanggal " +new java.text.SimpleDateFormat("dd MMMMM yyyy").format($P{tanggalPernyataanBelumLulus})+", saya masih belum lulus dan masih punya kewajiban akademik :"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="370" width="620" height="16" uuid="83a3da82-683f-4765-ac27-684731fe2a65"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Perpanjangan waktu studi sampai dengan "+new java.text.SimpleDateFormat("dd MMMMM yyyy").format($P{tanggalPerpanganWaktuStudiTahap1Akhir})
++ " ("+new java.text.SimpleDateFormat("dd MMMMM yyyy").format($P{tanggalPerpanganWaktuStudiTahap1Awal})+" s/d "+new java.text.SimpleDateFormat("dd MMMMM yyyy").format($P{tanggalPerpanganWaktuStudiTahap1Akhir})+")."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="386" width="620" height="16" uuid="b85fca92-06f6-4e60-885b-413743a3cacb"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Bersedia membayar DPP/SPP "+$P{bersediaMembayarDppTahap1}+" sesuai dengan Keriteria Kewajiban Akademik di atas."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="400" width="620" height="40" uuid="7b86b120-2df0-453f-bbff-ca0ab5fd5e85"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Apabila sampai batas waktu "+new java.text.SimpleDateFormat("dd MMMMM yyyy").format($P{tanggalPerpanganWaktuStudiTahap1Akhir})+" belum selesai, maka saya bersedia mengikuti/megurus perpajangan Waktu studi ke-II dan membayar DPP/SPP 25%. (Khusus bagi yang Keriteria A)"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="60" y="370" width="20" height="16" uuid="bb115692-9eb6-4baa-9534-45a4c6ab1cb3"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="386" width="20" height="16" uuid="c2ebcbf2-74eb-4e09-b2a7-27b508dded9d"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="400" width="20" height="16" uuid="db52d199-bb55-416f-8e13-0cc64ba3d24c"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="380" y="541" width="170" height="20" uuid="ad23332d-0956-434a-b6ef-fac890f3d15b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{wadek1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="550" y="541" width="180" height="20" uuid="f1bc41c2-6438-4781-90a5-60c91703f996"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{wadek2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="490" y="94" width="90" height="16" uuid="ec46b25b-2323-495f-82f0-1ab3ac2c4a10"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[No HP Siswa :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="490" y="110" width="90" height="16" uuid="b8b017ee-7842-4b2f-9320-19bf926e3ac4"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[No HP Orang Tua :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="580" y="94" width="152" height="16" uuid="524abf37-d93e-495b-8d0d-0e22f7662b0a"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{noHpMahasiswa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="580" y="110" width="152" height="16" uuid="34b8aaf4-eeff-4e91-a15b-2f38fccfe304"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{noHpOrangTua}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="342">
+			<staticText>
+				<reportElement x="50" y="19" width="286" height="18" uuid="f190f2b0-7b82-4f39-a2cf-cd9550fc4910"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PERPANJANGAN WAKTU STUDI KE - II]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="102" width="182" height="20" uuid="87e2fe12-c6d0-4abd-b8a6-98078f39b056">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Bandung, ..................20....]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="121" width="180" height="20" uuid="3a29de37-227d-4e6d-bff8-b95be9256bd5"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="11"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[Mahasiswa,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="121" width="200" height="30" uuid="0257869d-af0b-4973-b62f-b7c9572d6576"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<text><![CDATA[Ketua/Sekretaris
+Program Studi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="121" width="170" height="20" uuid="68fe69ab-bafb-436b-aa15-1d2d5742de9c"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="11"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[Wakil Dekan I]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="550" y="121" width="180" height="20" uuid="c0abc192-05e4-462b-aff9-b02e9180ed92"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="11"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[Wakil Dekan II]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="196" width="180" height="20" uuid="b2b28913-4362-45d8-9bf3-747defdbbd86">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{nama}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="203" width="200" height="20" uuid="bd81e64e-25c3-4c25-8ef3-e7b30e9c42eb">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="11"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[...................................................................]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="30" y="20" width="13" height="13" uuid="d100dca0-76ab-42d6-87cd-d8782498c145">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="30" y="234" width="296" height="18" uuid="731708f0-a846-4c12-8a57-426f1e80d9fe"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sebagai bahan pertimbangan, saya lampirkan :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="287" width="303" height="18" uuid="684a9c7d-93aa-4d6c-a66c-35c29ee9a1ab">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Keterangan :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="35" width="20" height="16" uuid="5cd5097d-982e-4a7f-b7d6-b4613bf319c1"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="51" width="20" height="16" uuid="447a6f8b-bf68-461c-b84b-e573c0c7face"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="65" width="20" height="16" uuid="887c2823-b93c-4887-b178-d7da9a03be18"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="35" width="620" height="16" uuid="4217b64c-2832-4a7a-9f75-80c12174d9db"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Perpanjangan waktu studi sampai dengan "+new java.text.SimpleDateFormat("dd MMMMM yyyy").format($P{tanggalPerpanganWaktuStudiTahap2Akhir})
++ " ("+new java.text.SimpleDateFormat("dd MMMMM yyyy").format($P{tanggalPerpanganWaktuStudiTahap2Awal})+" s/d "+new java.text.SimpleDateFormat("dd MMMMM yyyy").format($P{tanggalPerpanganWaktuStudiTahap2Akhir})+")."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="51" width="620" height="16" uuid="a98b4430-dfb8-44e7-847e-b7183c73742f"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Bersedia membayar DPP/SPP "+$P{bersediaMembayarDppTahap1}+" sesuai dengan Keriteria Kewajiban Akademik di atas."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="65" width="620" height="40" uuid="be132cd8-6e63-444e-95fa-1267253c8946"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Apabila sampai batas waktu "+new java.text.SimpleDateFormat("dd MMMMM yyyy").format($P{tanggalPerpanganWaktuStudiTahap2Akhir})+" belum selesai, maka saya bersedia mengikuti Program Compress/DO/ Daur Ulang."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="196" width="170" height="20" uuid="7c102a84-a695-4333-b5ff-46e283a5ecad"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{wadek1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="550" y="196" width="180" height="20" uuid="a4b189ac-6c94-4002-abf1-e2b3249a1a66"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{wadek2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="270" width="620" height="16" uuid="7473717d-7bac-4571-9336-2825d964e3e8"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["b. Foto copy kuitansi DPP/SPP Tahun Akademik "+$P{bersediaMembayarDppTahap1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="60" y="252" width="620" height="16" uuid="281dc0b1-0e7d-48cd-81f3-5a1424499ff3"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[a. Transkip Akademik yang ditandatangani oleh Pimpinan Prodi]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="60" y="305" width="620" height="16" uuid="e2eadf1d-4424-4bec-972a-b235e474cf72"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Kriteria A. Hanya Tinggal Tugas Akhir saja =  25% DPP dari pertahun angkatan (berlaku s/d "+new java.text.SimpleDateFormat("dd MMMMM yyyy").format($P{tanggalPerpanganWaktuStudiTahap1Akhir})+")"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="321" width="620" height="16" uuid="5fd2c7ac-90de-433e-a737-c5f7fb67e18f"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Kriteria B. Tugas Akhir dan Matakuliah  =  100% DPP dari pertahun angkatan (berlaku untuk 2 Semester yakni "+new java.text.SimpleDateFormat("dd MMMMM yyyy").format($P{tanggalPerpanganWaktuStudiTahap2Akhir})+")"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,111 @@
+@charset "ISO-8859-1";
+
+@
+-ms-viewport {
+	width: device-width;
+}
+
+html {
+	font-size: 0.75em
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+}
+
+.left {
+	text-align: left;
+	vertical-align: middle;
+}
+
+.center {
+	padding: auto 0px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.centered {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.right {
+	text-align: right;
+	vertical-align: middle;
+}
+
+.red {
+	background-color: red;
+}
+
+.green {
+	background-color: green;
+}
+
+.yellow {
+	background-color: yellow;
+}
+
+.orange {
+	background-color: orange;
+}
+
+.pink {
+	background-color: #f2dede;
+}
+
+.rowHighLight {
+	border: 1px solid #156090;
+	background: #186ba0;
+	color: #fff;
+}
+
+.registered {
+	border: 1px solid #156090;
+	background: #186ba0;
+	color: #fff;
+}
+
+.target {
+	color: #ffffff;
+	background-color: #9CCC65;
+	border-color: #9CCC65;
+}
+
+.lulus {
+	color: #ffffff;
+	background-color: #FF33FF;
+	border-color: #FF33FF;
+}
+
+.actionPlan {
+	color: #ffffff;
+	background-color: #FFA726;
+	border-color: #FFA726;
+}
+
+.beritaAcaraChecked {
+	border: 1px solid #1f89ce;
+	color: #fff;
+	background: #9CCC65;
+}
+
+.invisible {
+	display: none;
+}
+
+.red-button.ui-button.ui-state-default {
+	background-color: #d9534f;
+	border-color: #d9534f;
+	color: #fff;
+}
+
+.panelHome{
+	height: 150px;
+	text-align: right;
+	vertical-align: middle;
+	color: #595959;
+}

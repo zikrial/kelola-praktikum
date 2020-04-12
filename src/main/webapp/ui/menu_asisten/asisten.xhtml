@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/WEB-INF/templates/template.xhtml">
+	<ui:define name="content">
+		<h:form>
+			<p:remoteCommand actionListener="#{dtBasicUser.init()}"
+				update=":idFormTabel:idTabel" autoRun="true" />
+		</h:form>
+
+		<h:form id="formInput">
+			<p:outputLabel value="Tambah Asisten"/>
+			<br />
+			<p:inputText value="#{dtBasicUser.user.id}" placeholder="ID Asisten"/>
+			<br />
+			<p:inputText value="#{dtBasicUser.user.name}" placeholder="Nama" />
+			<br />
+			<p:inputText value="#{dtBasicUser.user.email}" placeholder="Email" />
+			<br />
+			<p:inputText value="#{dtBasicUser.user.password}"
+				placeholder="Password" />
+			<br />
+			<p:commandButton value="Add Asisten"
+				actionListener="#{dtBasicUser.addAsisten()}"
+				update=":idFormTabel:idTabel, :formInput" />
+		</h:form>
+
+		<h:form id="idFormTabel">
+			<p:dataTable var="user" value="#{dtBasicUser.listUser}" id="idTabel"
+				selectionMode="single" selection="#{dtBasicUser.selectedUser}"
+				rowKey="#{dtBasicUser.user.id}" editable="true">
+				<p:column headerText="id">
+					<h:outputText value="#{user.id}" />
+				</p:column>
+				<p:column headerText="name" sortBy="#{user.name}">
+					<h:outputText value="#{user.name}" />
+				</p:column>
+				<p:column headerText="Year" sortBy="#{user.email}">
+						<h:outputText value="#{user.email}" />
+				</p:column>
+			</p:dataTable>
+		</h:form>
+		<h:form id="idDelete">
+			<h:inputText value="#{dtBasicUser.user.id}" />
+			<p:commandButton
+				action="#{dtBasicUser.deleteAsisten(dtBasicUser.user.id)}"
+				value="Delete" class="btn btn-danger" />
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

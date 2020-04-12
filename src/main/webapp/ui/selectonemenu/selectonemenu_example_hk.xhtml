@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/WEB-INF/templates/template.xhtml">
+	<ui:define name="content">
+		<h:form>
+			<p:panelGrid columns="2">
+				<p:outputLabel value="Contoh HK Kota : " />
+				<p:selectOneMenu id="city" value="#{selectOneMenuView.city}">
+					<f:selectItem itemLabel="Pilih kota" itemValue="" />
+					<f:selectItems value="#{selectOneMenuView.listCity}" />
+				</p:selectOneMenu>
+
+				<p:outputLabel for="@next" value="Basic : " />
+				<p:selectOneMenu id="console" value="#{selectOneMenuView.city}">
+					<f:selectItem itemLabel="Pilih Kota" itemValue="" />
+					<f:selectItems value="#{selectOneMenuView.listCity}" />
+				</p:selectOneMenu>
+
+
+				<p:outputLabel for="@next" value="RTL : " />
+				<p:selectOneMenu id="trl" value="#{selectOneMenuView.city}"
+					dir="rtl">
+					<f:selectItem itemLabel="Pilih Kota" itemValue="" />
+					<f:selectItems value="#{selectOneMenuView.listCity}" />
+				</p:selectOneMenu>
+
+				<p:outputLabel for="@next" value="Grouping: " />
+				<p:selectOneMenu id="kota" value="#{selectOneMenuView.kota}">
+					<f:selectItem itemLabel="Pilih Kota" itemValue="" />
+					<f:selectItems value="#{selectOneMenuView.listKota}" />
+				</p:selectOneMenu>
+
+			</p:panelGrid>
+			<p:link value="link primefaces"
+				href="http://primefaces.org/showcase/ui/input/oneMenu.xhtml"
+				target="blank" />
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

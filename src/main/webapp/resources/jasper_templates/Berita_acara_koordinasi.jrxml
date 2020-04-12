@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.0.final using JasperReports Library version 6.5.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Registrasi_ams" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8d14bc75-de1f-4915-af29-6d43a3370c46">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="Dataset1" uuid="39d56faf-12cf-4685-bcb8-1475a6432756">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="prodi" class="java.lang.String"/>
+	<parameter name="angkatan" class="java.lang.Integer"/>
+	<parameter name="periodeSemester" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="77" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" mode="Transparent" x="120" y="11" width="230" height="29" uuid="c0605c5e-754b-4e52-b537-07b5e2b2b21a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<text><![CDATA[UNIVERSITAS PASUNDAN
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" mode="Transparent" x="211" y="40" width="139" height="29" uuid="92680ac6-9562-48c0-82f5-fcce797e98ff"/>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<text><![CDATA[Fakultas Teknik]]></text>
+			</staticText>
+			<line>
+				<reportElement x="380" y="10" width="1" height="63" uuid="15ebba20-3d61-480a-b971-42f3b704bc4d"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineColor="#FCAE3F"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="392" y="9" width="60" height="66" uuid="5daaa7fd-8b28-4b26-922b-9e6d5ee112dd"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[Teknik Industri
+Teknologi Pangan
+Teknik Mesin
+Teknik Infromatika
+Teknik Lingkungan
+Teknik Planologi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="9" width="66" height="66" uuid="8bcc6ed9-044a-4080-b66f-5dfd438512e9"/>
+				<textElement textAlignment="Left">
+					<font size="6"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[022 - 2019335
+022 - 2019339
+022 - 2019352
+022 - 2019371
+022 - 2009574
+022 - 2006466]]></text>
+			</staticText>
+			<image>
+				<reportElement x="34" y="0" width="75" height="72" uuid="a69dc963-e7d0-40b7-8373-27ab9d5b4101"/>
+				<imageExpression><![CDATA["logounpas.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="155" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="37" width="100" height="15" uuid="88414ef2-a317-42a5-a5f6-3f54c0d7f404"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Program Studi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="57" width="100" height="15" uuid="847125c7-70bb-4eda-acd2-1262651a6d22"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Angkatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="77" width="100" height="15" uuid="daf00dbc-e24c-462d-992d-f654aed478dd"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Tahun Ajaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="97" width="100" height="15" uuid="6587f3b5-a4fb-40a5-a995-8e3785d3dfb1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="37" width="10" height="15" uuid="059ce819-5157-477c-94da-bfc646afdec8"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="57" width="10" height="15" uuid="2306c1a0-e66d-4bae-bf9e-93d735f06376"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="77" width="10" height="15" uuid="97bc2ea6-fe34-4f3b-8e82-0512e1d2afd1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="97" width="10" height="15" uuid="b4b91870-5260-49a3-98c1-f1cf8440f340"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="117" width="70" height="15" uuid="a8227751-50f6-4ae1-9a3c-611cb8b3df54"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Pihak Diundang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="137" y="117" width="55" height="15" uuid="0766f86e-c6a9-4063-b0c0-1bd24b63fa15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Universitas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="211" y="117" width="43" height="15" uuid="65e8cd42-6a3d-4976-9a78-ce390d9539e8"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Fakultas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="117" width="67" height="15" uuid="40e8b6aa-4abf-4b3a-a502-19e71490df89"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Program Studi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="349" y="117" width="34" height="15" uuid="6d6de713-9fea-42e5-92df-fa152d4ae8f8"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Dosen]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="396" y="117" width="54" height="15" uuid="f7cbe7ed-c717-4b7a-87b3-7ca9f8e6755b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Mahasiswa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="465" y="117" width="56" height="15" uuid="656087a0-6e06-484f-a804-af6b8cf1fc2b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[OrangTua]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="124" y="118" width="9" height="9" uuid="235e9cc4-4d77-4a8d-aedc-99dbdbf32f95"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="199" y="118" width="9" height="9" uuid="7abae2cc-21b6-4d62-a0d8-aa27766622d9"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="254" y="118" width="9" height="9" uuid="aadf7326-d78a-40c9-8dae-7a97f3ba1d84"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="337" y="118" width="9" height="9" uuid="29399651-ee82-48cc-8fa7-75b62c1b97e7"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="384" y="118" width="9" height="9" uuid="54bef88b-f164-4b99-a900-79be84ff8c1d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="454" y="118" width="9" height="9" uuid="8b42f3ed-74bf-45b3-93e2-af38dc2f4ea3"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="40" y="137" width="99" height="15" uuid="a9418c5f-d34c-4853-b932-a0710d898528"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Topik Koordinasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="139" y="137" width="10" height="15" uuid="3dfa5031-40af-47cb-a9fa-2bebbc51c1c9"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="6" width="560" height="21" uuid="4f0aa2e6-6075-45ed-af04-1b4e88cfca87"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Berita Acara Penanganan AMS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="418" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="6" width="93" height="15" uuid="1b5114ea-58f5-49cb-b611-a85bec0c6df9"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Berita Acara]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="40" y="21" width="480" height="208" uuid="4bc06ebd-d688-49f7-8b33-71451fabd1cc"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="37" y="253" width="93" height="15" uuid="f166f619-d933-4463-9dd0-856d0d42c61c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Action Plan]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="37" y="278" width="480" height="92" uuid="160b20d5-0046-4bf5-bea4-1f9c562a585d"/>
+			</rectangle>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="92" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="-5" width="80" height="20" uuid="2f7525b5-7909-4698-b272-d30a695da5c2"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="11"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[Notulen Rapat,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="-5" width="90" height="35" uuid="aa042693-02b7-4ef7-80ef-9ca30f60aca1"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="11"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[Mengetahui, 
+Pimpinan Prodi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="-5" width="80" height="20" uuid="a42571a5-a20c-4a7a-9fe8-768b2e7156d6"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="11"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[Pimpinan Rapat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="-30" width="162" height="20" uuid="f35988ba-3214-4461-becd-371b9ae9429a"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="11"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[Bandung, ...............................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="60" width="141" height="20" uuid="90846254-c927-4ca4-bee6-fe40c846fa57"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="11"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[(.........................................)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="211" y="60" width="141" height="20" uuid="d522741c-16af-4b83-9de9-5de1b4a8b7eb"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="11"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[(.........................................)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="60" width="141" height="20" uuid="f6703a8b-5b89-4897-8e62-4baf1d219913"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="11"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[(.........................................)]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+</jasperReport>
