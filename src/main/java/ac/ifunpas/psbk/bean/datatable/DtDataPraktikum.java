@@ -20,49 +20,47 @@ import java.io.Serializable;
 import org.primefaces.event.RowEditEvent;
 
 import ac.ifunpas.psbk.bean.BaseBean;
-import ac.ifunpas.psbk.bean.dao.UserDao;
-import ac.ifunpas.psbk.pojo.Car;
-import ac.ifunpas.psbk.pojo.User;
+import ac.ifunpas.psbk.bean.dao.PraktikumDao;
+import ac.ifunpas.psbk.pojo.Praktikum;
 
-@ManagedBean(name = "dtBasicUser")
+@ManagedBean(name = "dtBasicPraktikum")
 @SessionScoped
-public class DtDataUser extends BaseBean implements Serializable {
-
-	private static List<User> listUser;
-	private User user;
-	private User selectedUser;
+public class DtDataPraktikum extends BaseBean implements Serializable{
+	private static List<Praktikum> listPraktikum;
+	private Praktikum praktikum;
+	private Praktikum selectedPraktikum;
 	
 	@PostConstruct
 	public void init() {
-		user = new User();
+		praktikum = new Praktikum();
 		try {
-			UserDao con = new UserDao();
-			listUser = con.lihatUser();
+			PraktikumDao con = new PraktikumDao();
+			listPraktikum = con.lihatPraktikum();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}		
 	}
     
-	public void addAsisten(){
-		UserDao con = new UserDao();
+	public void addPraktikum(){
+		PraktikumDao con = new PraktikumDao();
 
             try {
-                con.tambahUser(user);
-                listUser.add(user);
+                con.tambahPraktikum(praktikum);
+                listPraktikum.add(praktikum);
                 reset();
-                redirect("/ui/menu_asisten/asisten.xhtml");
+                redirect("/ui/menu_praktikum/praktikum.xhtml");
             } catch (SQLException e) {
     			e.printStackTrace();
             }
 	}
 	
-	public void deleteAsisten(int id) {
-		UserDao con = new UserDao();
+	public void deletePraktikum(int id) {
+		PraktikumDao con = new PraktikumDao();
 
         try {
-            con.hapusUser(id);
+            con.hapusPraktikum(id);
             reset();
-            redirect("/ui/menu_asisten/asisten.xhtml");
+            redirect("/ui/menu_praktikum/praktikum.xhtml");
         } catch (SQLException e) {
 			e.printStackTrace();
         }
@@ -82,38 +80,29 @@ public class DtDataUser extends BaseBean implements Serializable {
 		return null;
 
 	}
-	public void onRowEdit(RowEditEvent event) {
-		FacesMessage msg = new FacesMessage("Car Edited", ((Car) event.getObject()).getId());
-		FacesContext.getCurrentInstance().addMessage(null, msg);
-	}
 
-	public void onRowCancel(RowEditEvent event) {
-		FacesMessage msg = new FacesMessage("Edit Cancelled", ((Car) event.getObject()).getId());
-		FacesContext.getCurrentInstance().addMessage(null, msg);
-	}
 
-	public List<User> getListUser() {
-		return listUser;
+	public List<Praktikum> getListPraktikum() {
+		return listPraktikum;
 	}
 	
 	private void reset() {
-		user = new User();
+		praktikum = new Praktikum();
 	}
 	
-	public User getUser() {
-		return user;
+	public Praktikum getPraktikum() {
+		return praktikum;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setPraktikum(Praktikum praktikum) {
+		this.praktikum = praktikum;
 	}
 
-	public User getSelectedUser() {
-		return selectedUser;
+	public Praktikum getSelectedPraktikum() {
+		return selectedPraktikum;
 	}
 
-	public void setSelectedUser(User selectedUser) {
-		this.selectedUser = selectedUser;
+	public void setSelectedPraktikum(Praktikum selectedPraktikum) {
+		this.selectedPraktikum = selectedPraktikum;
 	}
-
 }

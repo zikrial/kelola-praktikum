@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/WEB-INF/templates/template.xhtml">
+	<ui:define name="content">
+		<h:form>
+			<p:remoteCommand actionListener="#{dtBasicPraktikum.init()}"
+				update=":idFormTabel:idTabel" autoRun="true" />
+		</h:form>
+
+		<h:form id="formInput" style="margin-bottom: 20px;">
+			<h1 style="font-family: calibri;">Form Tambah Praktikum</h1>
+			<br />
+			<p:inputText value="#{dtBasicPraktikum.praktikum.id}" placeholder="ID Praktikum" style="margin-bottom: 10px;"/>
+			<br />
+			<p:inputText value="#{dtBasicPraktikum.praktikum.mataPraktikum}" placeholder="Nama Praktikum" style="margin-bottom: 10px;"/>
+			<br />
+			<p:selectOneMenu id="ruangan" value="#{dtBasicPraktikum.praktikum.ruangan}" style="margin-bottom: 10px; width: 175px;">
+	            <f:selectItem itemLabel="Pilih Ruangan" itemValue="" />
+	            <f:selectItem itemLabel="SB 601" itemValue="SB 601" />
+	            <f:selectItem itemLabel="SB 602" itemValue="SB 602" />
+	            <f:selectItem itemLabel="SB 603" itemValue="SB 603" />
+	            <f:selectItem itemLabel="SB 604" itemValue="SB 604" />
+	            <f:selectItem itemLabel="SB 605" itemValue="SB 605" />
+	        </p:selectOneMenu>
+			<br />
+			<p:selectOneMenu id="hari" value="#{dtBasicPraktikum.praktikum.hari}" style="margin-bottom: 10px; width: 175px;">
+	            <f:selectItem itemLabel="Pilih Hari" itemValue="" />
+	            <f:selectItem itemLabel="Senin" itemValue="Monday" />
+	            <f:selectItem itemLabel="Selasa" itemValue="Thursday" />
+	            <f:selectItem itemLabel="Rabu" itemValue="Wednesday" />
+	            <f:selectItem itemLabel="Kamis" itemValue="Tuesday" />
+	            <f:selectItem itemLabel="Jumat" itemValue="Friday" />
+	            <f:selectItem itemLabel="Sabtu" itemValue="Saturday" />
+	        </p:selectOneMenu>
+			<br />
+			<p:selectOneMenu id="jam" value="#{dtBasicPraktikum.praktikum.jam}" style="margin-bottom: 10px; width: 175px;">
+	            <f:selectItem itemLabel="Pilih Jam" itemValue="" />
+	            <f:selectItem itemLabel="07.00-08.40" itemValue="07.00-08.40" />
+	            <f:selectItem itemLabel="08.40-10.30" itemValue="08.40-10.30" />
+	            <f:selectItem itemLabel="13.00-14.20" itemValue="13.00-14.20" />
+	            <f:selectItem itemLabel="14.20-16.00" itemValue="14.20-16.00" />
+	            <f:selectItem itemLabel="16.00-17.40" itemValue="16.00-17.40" />
+	        </p:selectOneMenu>
+			<br />
+			<p:commandButton value="Add Praktikum"
+				actionListener="#{dtBasicPraktikum.addPraktikum()}"
+				update=":idFormTabel:idTabel, :formInput" style="margin-bottom: 10px;"/>
+		</h:form>
+		
+		<h:form id="idDelete">
+			<h1 style="font-family: calibri;">Masukkan ID untuk menghapus praktikum</h1>
+			<h:inputText value="#{dtBasicPraktikum.praktikum.id}"  style="margin-bottom: 10px;"/>
+			<p:commandButton
+				action="#{dtBasicPraktikum.deletePraktikum(dtBasicPraktikum.praktikum.id)}"
+				value="Delete" class="btn btn-danger" />
+		</h:form>
+		
+		<h:form id="idFormTabel">
+			<p:dataTable var="praktikum" value="#{dtBasicPraktikum.listPraktikum}" id="idTabel">
+				<p:column headerText="id">
+					<h:outputText value="#{praktikum.id}" />
+				</p:column>
+				<p:column headerText="Nama Praktikum" sortBy="#{praktikum.mataPraktikum}">
+					<h:outputText value="#{praktikum.mataPraktikum}" />
+				</p:column>
+				<p:column headerText="Ruangan" sortBy="#{praktikum.ruangan}">
+						<h:outputText value="#{praktikum.ruangan}" />
+				</p:column>
+				<p:column headerText="Hari" sortBy="#{praktikum.hari}">
+						<h:outputText value="#{praktikum.hari}" />
+				</p:column>
+				<p:column headerText="Jam" sortBy="#{praktikum.jam}">
+						<h:outputText value="#{praktikum.jam}" />
+				</p:column>
+			</p:dataTable>
+		</h:form>
+
+	</ui:define>
+</ui:composition>
+</html>

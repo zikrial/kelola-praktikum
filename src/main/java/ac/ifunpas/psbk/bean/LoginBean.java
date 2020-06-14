@@ -28,7 +28,7 @@ public class LoginBean extends BaseBean{
 	}
 	
 	public void doLogin() {
-		if(userName.trim().equals("Hadi") && password.trim().equals("12345")) {
+		if(userName.trim().equals("admin") && password.trim().equals("1234")) {
 			redirect("/ui/home.xhtml");
 		}
 		else {
@@ -49,6 +49,10 @@ public class LoginBean extends BaseBean{
 		}
 		return null;
 
+	}
+	
+	public void doLogout() {
+		redirect("/ui/index.xhtml");
 	}
 	
 }

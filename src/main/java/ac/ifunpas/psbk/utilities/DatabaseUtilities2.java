@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DatabaseUtilities2 {
 
     public static Connection getConnection() {
-        return getConnection("jdbc:mysql://localhost:3306/db_tubes_psi", "root", "admin");
+        return getConnection("jdbc:mysql://localhost:3306/db_tubes_psi", "root", "");
     }
 
     private static Connection getConnection(String url, String user, String pass) {

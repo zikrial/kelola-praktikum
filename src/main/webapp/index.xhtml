@@ -5,8 +5,9 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui">
 
-<ui:composition template="/WEB-INF/templates/template.xhtml">
+<ui:composition template="/WEB-INF/templates/template2.xhtml">
 	<ui:define name="content">
+	<h1 style="font-family: calibri;">Login ID/Pass admin/1234</h1>
 		<h:form>
 			<p:outputLabel value="User" />
 			<br />
@@ -21,5 +22,56 @@
 		</h:form>
 	</ui:define>
 </ui:composition>
+
+
+
+<h:head>
+	<title><ui:insert name="pageTitle">Pemrograman Sistem Berbasis Komponen</ui:insert></title>
+	<h:outputStylesheet library="" name="style.css" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+</h:head>
+
+<h:body bgcolor="#ffffff">
+	<ui:insert name="mainMenu">
+		<div style="background: gray;">
+			<h:form>
+				<div class="ui-g" style="border-bottom: 1px solid #d5d5d5;">
+					<div class="ui-g-1" />
+
+					<div class="ui-g-10">
+						<p:menubar model="#{menuModelBean.menuModel}"
+							style="border:none; padding:0; margin:0; background: gray;" />
+					</div>
+
+					<div class="ui-g-1" />
+				</div>
+				<div class="centered">
+					<p:ajaxStatus>
+						<f:facet name="start">
+							<p:graphicImage name="/ajaxloadingbar.gif" />
+						</f:facet>
+					</p:ajaxStatus>
+				</div>
+
+			</h:form>
+		</div>
+	</ui:insert>
+	<h:form>
+		<p:growl id="growl" showDetail="true" closable="true"
+			autoUpdate="true">
+			<p:autoUpdate />
+		</p:growl>
+	</h:form>
+	<div class="ui-g">
+		<div class="ui-g-12 ui-lg-1 ui-md-12" />
+		<div class="ui-g-12 ui-lg-10 ui-md-12">
+			<ui:insert name="content" />
+		</div>
+		<div class="ui-g-12 ui-lg-1 ui-md-12" />
+	</div>
+
+</h:body>
+
 </html>
 

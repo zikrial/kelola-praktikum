@@ -44,8 +44,7 @@ public class MenuModelBean extends BaseBean implements Serializable {
 //		DefaultMenuItem asisten = new DefaultMenuItem();
 //		beranda.setUrl("/173040027/faces/ui/datatable/row_expansion.xhtml");
 //		beranda.setValue("Asisten");
-
-
+		
 		DefaultSubMenu asistenMenu = new DefaultSubMenu();
 		asistenMenu.setLabel("Asisten");
 //		
@@ -58,18 +57,30 @@ public class MenuModelBean extends BaseBean implements Serializable {
 		commandButtonItem.setUrl("/sample_jsf/faces/ui/menu_asisten/asisten.xhtml");
 		commandButtonItem.setValue("Menu Asisten");
 		asistenMenu.addElement(commandButtonItem);
+
+//		DefaultMenuItem praktikum = new DefaultMenuItem();
+//		beranda.setUrl("/sample_jsf/faces/ui/menu_asisten/asisten.xhtml");
+//		beranda.setValue("PPPPraktikum");
+//
+//		DefaultSubMenu praktikumMenu = new DefaultSubMenu();
+//		praktikumMenu.setLabel("Praktikum");
+//
+//		DefaultMenuItem commandButtonItem2 = new DefaultMenuItem();
+//		commandButtonItem2.setUrl("/sample_jsf/faces/ui/menu_praktikum/praktikum.xhtml");
+//		commandButtonItem2.setValue("Menu Praktikum");
+//		praktikumMenu.addElement(commandButtonItem2);
 		
-//		DefaultMenuItem selectOneItem = new DefaultMenuItem();
-//		selectOneItem.setUrl("/173040027/faces/ui/selectonemenu/selectonemenu_example_hk.xhtml");
-//		selectOneItem.setValue("Select One Menu");
+		DefaultMenuItem selectOneItem = new DefaultMenuItem();
+		selectOneItem.setUrl("/sample_jsf/faces/ui/menu_praktikum/praktikum.xhtml");
+		selectOneItem.setValue("Praktikum");
 //		
-//		DefaultSubMenu tableSubMenu = new DefaultSubMenu();
-//		tableSubMenu.setLabel("Data Table");
-//		
-//		DefaultMenuItem tableBasicItem = new DefaultMenuItem();
-//		tableBasicItem.setUrl("/173040027/faces/ui/datatable/basic.xhtml");
-//		tableBasicItem.setValue("Basic");
-//		tableSubMenu.addElement(tableBasicItem);
+		DefaultSubMenu tableSubMenu = new DefaultSubMenu();
+		tableSubMenu.setLabel("Jadwal");
+		
+		DefaultMenuItem tableBasicItem = new DefaultMenuItem();
+		tableBasicItem.setUrl("/sample_jsf/faces/ui/menu_jadwal/jadwal.xhtml");
+		tableBasicItem.setValue("Kelola Jadwal");
+		tableSubMenu.addElement(tableBasicItem);
 		
 //		DefaultMenuItem tableSelectionItem = new DefaultMenuItem();
 //		tableSelectionItem.setUrl("/173040027/faces/ui/datatable/selection.xhtml");
@@ -119,8 +130,9 @@ public class MenuModelBean extends BaseBean implements Serializable {
 		menuModel.addElement(beranda);
 //		menuModel.addElement(asisten);
 		menuModel.addElement(asistenMenu);
-//		menuModel.addElement(selectOneItem);
-//		menuModel.addElement(tableSubMenu);
+//		menuModel.addElement(praktikum);
+		menuModel.addElement(selectOneItem);
+		menuModel.addElement(tableSubMenu);
 
 	}
 
