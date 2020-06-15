@@ -45,6 +45,7 @@ public class DtDataJadwal extends BaseBean implements Serializable{
 	public void addJadwal(){
 		JadwalDao con = new JadwalDao();
 
+			
             try {
                 con.tambahJadwal(jadwal);
                 listJadwal.add(jadwal);
@@ -58,13 +59,17 @@ public class DtDataJadwal extends BaseBean implements Serializable{
 	public void deleteJadwal(int id) {
 		JadwalDao con = new JadwalDao();
 
-        try {
-            con.hapusJadwal(id);
-            reset();
-            redirect("/ui/menu_jadwal/jadwal.xhtml");
-        } catch (SQLException e) {
-			e.printStackTrace();
-        }
+		if(id != 0) {
+	        try {
+	            con.hapusJadwal(id);
+	            reset();
+	            redirect("/ui/menu_jadwal/jadwal.xhtml");
+	        } catch (SQLException e) {
+				e.printStackTrace();
+	        }
+		} else {
+			messageError("Data Kosong, Harap isi!");
+		}
 	}
 	
 	public String redirect(String inp_url) {

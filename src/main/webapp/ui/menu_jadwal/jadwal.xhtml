@@ -15,16 +15,14 @@
 		<h:form id="formInput" style="margin-bottom: 20px;">
 			<h1 style="font-family: calibri;">Form Tambah Jadwal</h1>
 			<br />
-			<p:inputText value="#{dtBasicJadwal.jadwal.id}" placeholder="ID Jadwal" style="margin-bottom: 10px;"/>
-			<br />
-			<p:selectOneMenu id="idAsisten" value="#{dtBasicJadwal.jadwal.idAsisten}" style="margin-bottom: 10px; width: 175px;">
+			<p:selectOneMenu id="idAsisten" value="#{dtBasicJadwal.jadwal.idAsisten}" required="true" style="margin-bottom: 10px; width: 175px;">
 	            <f:selectItem itemLabel="Pilih Asisten" itemValue="" />
 	            <f:selectItems value="#{dtBasicJadwal.listUser}" var="user" itemLabel="#{user.name}" itemValue="#{user.id}" />
 	        </p:selectOneMenu>
 			<br />
-			<p:selectOneMenu id="idPraktikum" value="#{dtBasicJadwal.jadwal.idPraktikum}" style="margin-bottom: 10px; width: 175px;">
+			<p:selectOneMenu id="idPraktikum" value="#{dtBasicJadwal.jadwal.idPraktikum}" required="true" style="margin-bottom: 10px; width: 175px;">
 	            <f:selectItem itemLabel="Pilih Praktikum" itemValue="" />
-	            <f:selectItems value="#{dtBasicJadwal.listPraktikum}" var="praktikum" itemLabel="#{praktikum.mataPraktikum}" itemValue="#{praktikum.id}" />
+	            <f:selectItems value="#{dtBasicJadwal.listPraktikum}" var="praktikum" itemLabel="#{praktikum.mataPraktikum} - #{praktikum.hari}" itemValue="#{praktikum.id}" />
 	        </p:selectOneMenu>
 			<br />
 			<p:commandButton value="Add Jadwal"
@@ -42,14 +40,14 @@
 		
 		<h:form id="idFormTabel">
 			<p:dataTable var="jadwal" value="#{dtBasicJadwal.listJadwal}" id="idTabel">
-				<p:column headerText="id">
+				<p:column headerText="id" style="width:50px;">
 					<h:outputText value="#{jadwal.id}" />
 				</p:column>
 				<p:column headerText="Nama Asisten" sortBy="#{jadwal.namaUser}">
 					<h:outputText value="#{jadwal.namaUser}" />
 				</p:column>
 				<p:column headerText="Nama Praktikum" sortBy="#{jadwal.namaPraktikum}">
-						<h:outputText value="#{jadwal.namaPraktikum}" />
+						<h:outputText value="#{jadwal.namaPraktikum} - #{jadwal.hariPraktikum} - #{jadwal.jamPraktikum} " />
 				</p:column>
 			</p:dataTable>
 		</h:form>

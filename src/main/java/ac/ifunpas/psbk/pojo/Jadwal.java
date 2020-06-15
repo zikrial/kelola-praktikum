@@ -7,6 +7,8 @@ public class Jadwal {
 	private int idPraktikum;
 	private String namaUser;
 	private String namaPraktikum;
+	private String hariPraktikum;
+	private String jamPraktikum;
 
 	public Jadwal() {
 		
@@ -55,6 +57,22 @@ public class Jadwal {
 
 	public void setNamaPraktikum(String namaPraktikum) {
 		this.namaPraktikum = namaPraktikum;
+	}
+
+	public String getHariPraktikum() {
+		return hariPraktikum;
+	}
+
+	public void setHariPraktikum(String hariPraktikum) {
+		this.hariPraktikum = hariPraktikum;
+	}
+
+	public String getJamPraktikum() {
+		return jamPraktikum;
+	}
+
+	public void setJamPraktikum(String jamPraktikum) {
+		this.jamPraktikum = jamPraktikum;
 	}
 
 }

@@ -36,6 +36,8 @@ public class JadwalDao {
 				jadwal.setIdPraktikum(rs.getInt("id_praktikum"));
 				jadwal.setNamaUser(rs.getString("name"));
 				jadwal.setNamaPraktikum(rs.getString("mata_praktikum"));
+				jadwal.setHariPraktikum(rs.getString("hari"));
+				jadwal.setJamPraktikum(rs.getString("jam"));
 
 				listJadwal.add(jadwal);
 			}
@@ -73,12 +75,14 @@ public class JadwalDao {
 		Connection con = DatabaseUtilities2.getConnection();
 		try {
 			Statement state = con.createStatement();
-			ResultSet rs = state.executeQuery("SELECT id,mata_praktikum FROM praktikum");
+			ResultSet rs = state.executeQuery("SELECT id,mata_praktikum,hari,jam FROM praktikum");
 			listPraktikum = new ArrayList<>();
 			while (rs.next()) {
 				Praktikum praktikum = new Praktikum();
 				praktikum.setId(rs.getInt("id"));
 				praktikum.setMataPraktikum(rs.getString("mata_praktikum"));
+				praktikum.setHari(rs.getString("hari"));
+				praktikum.setJam("jam");
 				listPraktikum.add(praktikum);
 			}
 		} finally {

@@ -15,13 +15,11 @@
 		<h:form id="formInput" style="margin-bottom: 20px;">
 			<h1 style="font-family: calibri;">Form Tambah Asisten</h1>
 			<br />
-			<p:inputText value="#{dtBasicUser.user.id}" placeholder="ID Asisten" style="margin-bottom: 10px;"/>
+			<p:inputText value="#{dtBasicUser.user.name}" placeholder="Nama" required="true" style="margin-bottom: 10px;"/>
 			<br />
-			<p:inputText value="#{dtBasicUser.user.name}" placeholder="Nama" style="margin-bottom: 10px;"/>
+			<p:inputText value="#{dtBasicUser.user.email}" placeholder="Email" required="true" style="margin-bottom: 10px;"/>
 			<br />
-			<p:inputText value="#{dtBasicUser.user.email}" placeholder="Email" style="margin-bottom: 10px;"/>
-			<br />
-			<p:inputText value="#{dtBasicUser.user.password}"
+			<p:inputText value="#{dtBasicUser.user.password}" required="true"
 				placeholder="Password" style="margin-bottom: 10px;"/>
 			<br />
 			<p:commandButton value="Add Asisten"
@@ -39,8 +37,8 @@
 		
 		<h:form id="idFormTabel">
 			<p:dataTable var="user" value="#{dtBasicUser.listUser}" id="idTabel">
-				<p:column headerText="id">
-					<h:outputText value="#{user.id}" />
+				<p:column headerText="id" style="width:50px;">
+					<h:outputText value="#{user.id}"/>
 				</p:column>
 				<p:column headerText="Name" sortBy="#{user.name}">
 					<h:outputText value="#{user.name}" />

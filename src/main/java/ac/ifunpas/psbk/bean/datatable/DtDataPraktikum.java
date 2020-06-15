@@ -57,13 +57,17 @@ public class DtDataPraktikum extends BaseBean implements Serializable{
 	public void deletePraktikum(int id) {
 		PraktikumDao con = new PraktikumDao();
 
-        try {
-            con.hapusPraktikum(id);
-            reset();
-            redirect("/ui/menu_praktikum/praktikum.xhtml");
-        } catch (SQLException e) {
-			e.printStackTrace();
-        }
+		if(id != 0) {
+	        try {
+	            con.hapusPraktikum(id);
+	            reset();
+	            redirect("/ui/menu_praktikum/praktikum.xhtml");
+	        } catch (SQLException e) {
+				e.printStackTrace();
+	        }
+		} else {
+			messageError("Data Kosong, Harap Isi!");
+		}
 	}
 	
 	public String redirect(String inp_url) {

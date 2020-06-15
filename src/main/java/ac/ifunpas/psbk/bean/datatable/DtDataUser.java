@@ -45,7 +45,7 @@ public class DtDataUser extends BaseBean implements Serializable {
     
 	public void addAsisten(){
 		UserDao con = new UserDao();
-
+		
             try {
                 con.tambahUser(user);
                 listUser.add(user);
@@ -59,13 +59,17 @@ public class DtDataUser extends BaseBean implements Serializable {
 	public void deleteAsisten(int id) {
 		UserDao con = new UserDao();
 
-        try {
-            con.hapusUser(id);
-            reset();
-            redirect("/ui/menu_asisten/asisten.xhtml");
-        } catch (SQLException e) {
-			e.printStackTrace();
-        }
+		if(id != 0) {
+	        try {
+	            con.hapusUser(id);
+	            reset();
+	            redirect("/ui/menu_asisten/asisten.xhtml");
+	        } catch (SQLException e) {
+				e.printStackTrace();
+	        }
+		} else {
+			messageError("Data Kosong Harap Isi!");
+		}
 	}
 	
 	public String redirect(String inp_url) {
